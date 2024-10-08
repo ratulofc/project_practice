@@ -4,8 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1{
+            font-size: 4em;
+            font-family: system-ui;
+        }
+        #grid-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            gap: 2em;
+        }
+        #card{
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img{
+            height: 20em;
+            width: 20em;
+            border-radius: 15px 15px 0px 0px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        p{
+            font-size: 1.5em;
+            font-family: system-ui;
+
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="main">
+        <h1>Multiple Projects in a Single page</h1>
+        <div id="grid-container">
+            <a id="card" href="./barber-shop" target="_blank">
+                <img src="./image/barber-shop.jpg" alt="">
+                <p>Barbar Shop</p>
+            </a>
+
+        </div>
+    </div>
 </body>
 </html>
