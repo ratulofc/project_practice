@@ -1,0 +1,150 @@
+:root{
+    --primary-color: #d6a354;
+    --red: #c12828;
+    --white: #ffffff;
+    --btn-hover: #FDBB2D;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "unbounded";
+    display: flex;
+    overflow-x: hidden;
+}
+/* -------------------Header CSS start here------------------ */
+header{
+    width: 25vw;
+    height: 100vh;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    position: sticky;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+header img{
+    height: 10vh;
+    width: 10vw;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul .nav-link{
+    font-size: 20px;
+    font-weight:900;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+/* ----------------------------Header CSS end here--------------------------- */
+
+/* ----------------------------Hero Section CSS Start Here------------------- */
+main{
+    flex-grow: 1;
+}
+main .hero{
+    height:100vh;
+    background-image: url(../barber-shop/image/client-doing-hair-cut-barber-shop-salon.jpg), linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    border-bottom: 1em solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30em;
+}
+.hero .content-title{
+    display: flex;
+    flex-direction: column;
+    gap:1.5em;
+}
+.content-title .heading{
+    color: var(--white);
+    font-size: 74px;
+}
+.content-title .desc{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.btn-group button{
+    border-radius: 25px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+    padding: 10px 20px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.btn-group .about-btn{
+    background-color: #ffffff00;
+    border: 2px solid var(--white);
+    &:hover{
+        background-color: var(--btn-hover);
+        border: 2px solid var(--btn-hover);
+    }
+}
+.btn-group .what-we-do-btn{
+    background-color: var(--red);
+    border: 2px solid transparent;
+    &:hover{
+        background-color: var(--btn-hover);
+    }
+}
+.content-image img{
+    height: 115px;
+    width: 115px;
+    position: absolute;
+    right: 80px;
+    border: 10px solid var(--primary-color);
+    border-radius: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.content-image .img-desc-group{
+    height: 360px;
+    width: 360px;
+    padding: 50px 90px 50px 50px;
+    border: 10px solid var(--primary-color);
+    border-radius: 100%;
+    position: absolute;
+    bottom: -60px;
+    right: -60px;
+}
+.img-desc-group p{
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--white);
+}
+.img-desc-group button{
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+    padding: 10px 20px;
+    margin: 20px 0px 0px 20px;
+    &:hover{
+        cursor: pointer;
+        background-color: var(--red);
+    }
+}
+/* ----------------------------Hero Section CSS End Here------------------- */
+.barber{
+    height: 100vh;
+}
