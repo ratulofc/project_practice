@@ -8,11 +8,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-body{
     font-family: "unbounded";
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.body-container{
     display: flex;
-    overflow-x: hidden;
 }
 /* -------------------Header CSS start here------------------ */
 header{
@@ -38,6 +41,7 @@ header ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 ul .nav-link{
     font-size: 20px;
@@ -50,6 +54,7 @@ ul .nav-link{
 /* ----------------------------Hero Section CSS Start Here------------------- */
 main{
     flex-grow: 1;
+    /* width: 100%; */
 }
 main .hero{
     height:100vh;
@@ -62,9 +67,12 @@ main .hero{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30em;
+    position: relative;
+    overflow: hidden;
 }
 .hero .content-title{
+    position: absolute;
+    left: 6em;
     display: flex;
     flex-direction: column;
     gap:1.5em;
@@ -104,17 +112,7 @@ main .hero{
         background-color: var(--btn-hover);
     }
 }
-.content-image img{
-    height: 115px;
-    width: 115px;
-    position: absolute;
-    right: 80px;
-    border: 10px solid var(--primary-color);
-    border-radius: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-.content-image .img-desc-group{
+.content-image{
     height: 360px;
     width: 360px;
     padding: 50px 90px 50px 50px;
@@ -124,7 +122,18 @@ main .hero{
     bottom: -60px;
     right: -60px;
 }
+.content-image img{
+    height: 115px;
+    width: 115px;
+    position: absolute;
+    top: -60px;
+    left: 90px;
+    border: 10px solid var(--primary-color);
+    border-radius: 100%;
+    object-fit: cover;
+}
 .img-desc-group p{
+    padding-top: 20px;
     font-size: 28px;
     font-weight: 900;
     color: var(--white);
