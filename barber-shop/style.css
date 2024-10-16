@@ -18,6 +18,9 @@ html,body{
     display: flex;
 }
 /* -------------------Header CSS start here------------------ */
+.toggle-icon{
+    display: none;
+}
 header{
     width: 25vw;
     height: 100vh;
@@ -30,11 +33,11 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10vh;
+    gap: 7vh;
 }
 header img{
-    height: 10vh;
-    width: 10vw;
+    height: 5em;
+    width: 10em;
 }
 header ul{
     list-style: none;
@@ -58,7 +61,7 @@ main{
 }
 main .hero{
     height:100vh;
-    background-image: url(../barber-shop/image/client-doing-hair-cut-barber-shop-salon.jpg), linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    background-image: url(../barber-shop/image/client-doing-hair-cut-barber-shop-salon.jpg), linear-gradient(90deg, #d9980a 0%, #22C1C3 100%);
     background-blend-mode: overlay;
     background-position: center;
     background-size: cover;
@@ -153,7 +156,96 @@ main .hero{
         background-color: var(--red);
     }
 }
+
 /* ----------------------------Hero Section CSS End Here------------------- */
+
 .barber{
     height: 100vh;
+}
+
+
+/* -----------------------------Responsive CSS Started------------------------------ */
+
+@media (max-width: 991px) {  /*Tablet Responsive (till 991px this CSS rule will followed)*/
+    .content-image{
+        display: none;
+    }
+    main .hero{
+        max-height: 80vh;
+    }
+    header{
+        min-width: 35vw;
+    }
+    .content-title .heading{
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 771px){   /*Mobile Responsive (till 771px this CSS rule will followed)*/
+    header{
+        width: 100vw;
+        height: 0px;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+    }
+    header.active{
+        transition: 0.3s;
+        height: 100vh;
+    }
+    /* Design and Animation start for Hamburger Icon */
+    .toggle-icon{
+        height: 50px;
+        width: 50px;
+        background-color: var(--primary-color);
+        border-radius: 100%;
+        border: none;
+        z-index: 2;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .toggle-icon span{
+        height: 3px;
+        width: 25px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        position: absolute;
+        transition: 0.5s ease;
+    }
+    .toggle-icon span:nth-child(1){
+        top: 30%;
+    }
+    .toggle-icon span:nth-child(2){
+        top: 50%;
+    }
+    .toggle-icon span:nth-child(3){
+        top: 70%;
+    }
+    .toggle-icon.active span:nth-child(1){
+        top: 50%;
+        transform: rotate(45deg);
+    }
+    .toggle-icon.active span:nth-child(2){
+        opacity: 0;
+    }
+    .toggle-icon.active span:nth-child(3){
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+    /* Design and Animation end for Hamburger Icon */
+    .content-title .heading{
+        font-size: 38px;
+    }
+    .hero .content-title{
+        left: 2em;
+    }
+    main .hero{
+        max-height: 80vh;
+    }
 }
