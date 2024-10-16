@@ -51,6 +51,10 @@ ul .nav-link{
     font-weight:900;
     line-height: 2em;
     text-transform: uppercase;
+    transition: 0.3s;
+    &:hover{
+        color: #ffffff;
+    }
 }
 /* ----------------------------Header CSS end here--------------------------- */
 
