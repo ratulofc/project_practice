@@ -183,7 +183,7 @@ main #hero{
     .content-image{
         display: none;
     }
-    main .hero{
+    main #hero{
         max-height: 80vh;
     }
     header{
@@ -203,7 +203,7 @@ main #hero{
         height: 0px;
         padding: 0;
         overflow: hidden;
-        position: absolute;
+        position: fixed;
         z-index: 1;
     }
     header.active{
@@ -259,10 +259,10 @@ main #hero{
     .content-title .heading{
         font-size: 38px;
     }
-    .hero .content-title{
+    #hero .content-title{
         left: 2em;
     }
-    main .hero{
+    main #hero{
         max-height: 80vh;
     }
 }
