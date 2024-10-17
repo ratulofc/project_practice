@@ -13,6 +13,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    scroll-behavior: smooth;
 }
 .body-container{
     display: flex;
@@ -51,6 +52,14 @@ ul .nav-link{
     font-weight:900;
     line-height: 2em;
     text-transform: uppercase;
+}
+ul .high-light{
+    color: #ffffff;
+    transition: 0.3s;
+}
+ul a{
+    text-decoration: none;
+    color: #000000;
     transition: 0.3s;
     &:hover{
         color: #ffffff;
@@ -63,7 +72,7 @@ main{
     flex-grow: 1;
     /* width: 100%; */
 }
-main .hero{
+main #hero{
     height:100vh;
     background-image: url(../barber-shop/image/client-doing-hair-cut-barber-shop-salon.jpg), linear-gradient(90deg, #d9980a 0%, #22C1C3 100%);
     background-blend-mode: overlay;
@@ -77,7 +86,7 @@ main .hero{
     position: relative;
     overflow: hidden;
 }
-.hero .content-title{
+#hero .content-title{
     position: absolute;
     left: 6em;
     display: flex;
@@ -163,14 +172,14 @@ main .hero{
 
 /* ----------------------------Hero Section CSS End Here------------------- */
 
-.barber{
+#story{
     height: 100vh;
 }
 
 
 /* -----------------------------Responsive CSS Started------------------------------ */
-
-@media (max-width: 991px) {  /*Tablet Responsive (till 991px this CSS rule will followed)*/
+/* -----------------------Tablet Responsive START(till 991px this CSS rule will followed)-------------------------- */
+@media (max-width: 991px) {
     .content-image{
         display: none;
     }
@@ -184,8 +193,11 @@ main .hero{
         font-size: 54px;
     }
 }
+/* -----------------------Tablet Responsive END (till 991px this CSS rule will followed)-------------------------- */
 
-@media (max-width: 771px){   /*Mobile Responsive (till 771px this CSS rule will followed)*/
+
+/* -----------------------Mobile Responsive START(till 771px this CSS rule will followed)-------------------------- */
+@media (max-width: 771px){
     header{
         width: 100vw;
         height: 0px;
@@ -243,6 +255,7 @@ main .hero{
         transform: rotate(-45deg);
     }
     /* Design and Animation end for Hamburger Icon */
+
     .content-title .heading{
         font-size: 38px;
     }
@@ -253,3 +266,4 @@ main .hero{
         max-height: 80vh;
     }
 }
+/* -----------------------Mobile Responsive END(till 771px this CSS rule will followed)-------------------------- */
