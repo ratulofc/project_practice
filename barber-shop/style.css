@@ -392,6 +392,9 @@ main #hero{
     #story{
         padding: 50px 25px;
     }
+    #story .heading{
+        font-size: 24px;
+    }
     .barbers-card .card{
         width: 68vw;
     }
@@ -399,7 +402,11 @@ main #hero{
         width: 65vw;
     }
     .story-container{
+        padding: 0px;
         margin: 0px auto;
+    }
+    .barbers-card .card .desc-box {
+        width: auto;
     }
 }
 /* -----------------------Mobile Responsive END(till 771px this CSS rule will followed)-------------------------- */
