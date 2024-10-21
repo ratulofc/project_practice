@@ -390,7 +390,7 @@ main #hero{
         max-height: 80vh;
     }
     #story{
-        padding: 50px 25px;
+        padding: 50px 0px;
     }
     #story .heading{
         font-size: 24px;
