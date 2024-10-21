@@ -74,6 +74,7 @@ main{
 }
 main #hero{
     height:100vh;
+    /* width: 75vw; */
     background-image: url(../barber-shop/image/client-doing-hair-cut-barber-shop-salon.jpg), linear-gradient(90deg, #d9980a 0%, #22C1C3 100%);
     background-blend-mode: overlay;
     background-position: center;
@@ -172,9 +173,112 @@ main #hero{
 
 /* ----------------------------Hero Section CSS End Here------------------- */
 
+/* ----------------------------Babers Section CSS START Here------------------- */
+
 #story{
     height: 100vh;
 }
+.story-container{
+    padding: 100px 0px 0px 50px;
+    width: 75vw;
+}
+.story-container .heading{
+    font-size: 46px;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+.story-container .desc{
+    font-size: 20px;
+    font-weight: 300;
+    color: #717275;
+    padding-bottom: 1.5em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #dee2e6;
+}
+#story .desc span{
+    color: var(--primary-color);
+}
+#story .show-case-header{
+    font-size: 22px;
+    color: var(--red);
+    font-weight: 900;
+    padding-bottom: 48px;
+}
+.barbers-card{
+    padding: 0px 50px;
+    display: flex;
+    gap: 3em;
+}
+.barbers-card .card{
+    max-height: 15em;
+    width: 26.5vw;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+    &:hover{
+        transform: scale(1.04);
+        background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    }
+}
+.barbers-card .card:hover .desc-box{
+    margin-bottom: 10px;
+}
+.barbers-card .card img{
+    height: 15em;
+    width: 25vw;
+    margin: 0px 10px;
+    object-fit: cover;
+    border-radius: 20px;
+    transform: rotate(8deg);
+}
+.barbers-card .card .desc-box{
+    height: auto;
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    transition: 0.3s;
+}
+.desc-box p{
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #717275;
+}
+.desc-box .socials{
+    margin: 15px;
+}
+.desc-box .socials a{
+    padding: 5px 9px;
+    background-color: var(--red);
+    color: #ffffff;
+    border-radius: 100%;
+    font-size: 20px;
+    transition: 0.3s;
+    &:hover{
+        cursor: pointer;
+        background-color: var(--primary-color);
+    }
+}
+/* ----------------------------Babers Section CSS END Here------------------- */
+/* ----------------------------Discount Section CSS START Here------------------------ */
+
+#discount{
+    /* padding-top: 10em; */
+}
+
+/* ----------------------------Discount Section CSS END Here------------------------ */
+
 
 
 /* -----------------------------Responsive CSS Started------------------------------ */
@@ -191,6 +295,26 @@ main #hero{
     }
     .content-title .heading{
         font-size: 54px;
+    }
+    .story-container{
+        padding: 50px 0px 0px 25px;
+        width: 65vw;
+    }
+    #story .heading{
+        font-size: 36px;
+    }
+    #story .show-case-header{
+        font-size: 18px;
+    }
+    .barbers-card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .barbers-card .card{
+        width: 48vw;
+    }
+    .barbers-card .card img{
+        width: 45vw;
     }
 }
 /* -----------------------Tablet Responsive END (till 991px this CSS rule will followed)-------------------------- */
@@ -264,6 +388,18 @@ main #hero{
     }
     main #hero{
         max-height: 80vh;
+    }
+    #story{
+        padding: 50px 25px;
+    }
+    .barbers-card .card{
+        width: 68vw;
+    }
+    .barbers-card .card img{
+        width: 65vw;
+    }
+    .story-container{
+        margin: 0px auto;
     }
 }
 /* -----------------------Mobile Responsive END(till 771px this CSS rule will followed)-------------------------- */

@@ -26,7 +26,7 @@ function navHighlite(){
             }
         });
     },{
-        threshold: 0.8 // 80% of the section needs to be visible
+        threshold: 0.5 // 50% of the section needs to be visible
     });
 
     //This part loop through all the selected section on the page and call observer
