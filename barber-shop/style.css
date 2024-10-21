@@ -274,12 +274,39 @@ main #hero{
 /* ----------------------------Discount Section CSS START Here------------------------ */
 
 #discount{
-    /* padding-top: 10em; */
+    padding: 100px 50px;
+    background-image: url(./image/barber-customer-giving-high-five.jpg);
+    background-color: #00000071;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
 }
-
+#discount p:nth-child(1){
+    font-size: 46px;
+    color: var(--red);
+    font-weight: 900;
+    margin: 0px 0px 1rem;
+}
+#discount p:nth-child(2){
+    font-size: 20px;
+    color: var(--white);
+    margin: 0px 0px 1rem;
+}
+#discount p:nth-child(3){
+    width: 18em;
+    margin: 0px auto;
+    padding: 10px 10px;
+    background-color: var(--primary-color);
+    font-weight: 900;
+    border-radius: 50px;
+}
 /* ----------------------------Discount Section CSS END Here------------------------ */
 
-
+#services{
+    height: 100vh;
+}
 
 /* -----------------------------Responsive CSS Started------------------------------ */
 /* -----------------------Tablet Responsive START(till 991px this CSS rule will followed)-------------------------- */
@@ -315,6 +342,10 @@ main #hero{
     }
     .barbers-card .card img{
         width: 45vw;
+    }
+    #discount{
+        margin-top: 20em;
+        padding: 50px 25px;
     }
 }
 /* -----------------------Tablet Responsive END (till 991px this CSS rule will followed)-------------------------- */
