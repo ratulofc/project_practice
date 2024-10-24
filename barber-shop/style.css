@@ -522,7 +522,7 @@ main #hero{
         width: auto;
     }
     #discount{
-        margin-top: 35em;
+        margin-top: 25em;
     }
     #discount p:nth-child(1){
         font-size: 28px;
@@ -536,6 +536,9 @@ main #hero{
     }
     .service-card .card{
         max-width: 70vw;
+    }
+    .service-card .card .content p:nth-child(1){
+        font-size: 20px;
     }
 }
 /* -----------------------Mobile Responsive END(till 771px this CSS rule will followed)-------------------------- */
