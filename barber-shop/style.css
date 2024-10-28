@@ -3,6 +3,7 @@
     --red: #c12828;
     --white: #ffffff;
     --btn-hover: #FDBB2D;
+    --gray: #717275;
 }
 *{
     padding: 0;
@@ -190,7 +191,7 @@ main #hero{
 .story-container .desc{
     font-size: 20px;
     font-weight: 300;
-    color: #717275;
+    color: var(--gray);
     padding-bottom: 1.5em;
     margin-bottom: 2em;
     border-bottom: 1px solid #dee2e6;
@@ -253,7 +254,7 @@ main #hero{
     margin: 15px;
     font-size: 20px;
     font-weight: 300;
-    color: #717275;
+    color: var(--gray);
 }
 .desc-box .socials{
     margin: 15px;
@@ -369,9 +370,110 @@ main #hero{
 }
 /* ----------------------------Service Section CSS END Here------------------------*/
 
+/* ----------------------------Price List Section CSS Start Here------------------------*/
 #bookaseat{
-    height: 130vh;
+    height: 115vh;
+    margin-top: 25vh;
+    padding: 100px 50px;
+    background-image: url(../barber-shop/image/vintage-chair-barbershop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+#bookaseat .content{
+    max-width: 60vw;
+    margin: 0 auto;
+    padding: 65px;
+    background-color: var(--white);
+    border-radius: 25px;
+}
+.content .head .heading{
+    text-align: center;
+    font-size: 46px;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+.content .head .desc{
+    margin-bottom: 1em;
+    font-size: 20px;
+    font-weight: 100;
+    color: var(--gray);
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.form .personaldata{
+    display: flex;
+    flex-wrap: wrap;
+}
+.personaldata div{
+    width: 50%;
+    padding: 0 12px;
+    flex: 0 0 auto;
+}
+.personaldata div input, select{
+    width: 100%;
+    padding: 13px 12px;
+    margin-bottom: 24px;
+    color: var(--gray);
+    font-weight: 900;
+    border-radius: 10px;
+    border: 1px solid #c3c9ce;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.5s ease;
+}
+.personaldata div input:focus{
+    border-color: transparent;
+    box-shadow: 0 0 0 5px rgb(186, 238, 230);
+}
+.personaldata div select:focus{
+    border-color: transparent;
+    box-shadow: 0 0 0 5px rgb(186, 238, 230);
+}
+.form .comment{
+    width: 100%;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+}
+.form .comment textarea{
+    width: 100%;
+    padding: 13px 12px;
+    margin-bottom: 24px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 1px solid #c3c9ce;
+    outline: none;
+    transition: box-shadow 0.5s ease;
+    &:focus{
+        border-color: transparent;
+        box-shadow: 0 0 0 5px rgb(186, 238, 230);
+    }
+}
+.form .seatsubmit{
+    padding: 13px 24px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white);
+    background-color: var(--red);
+    border: none;
+    border-radius: 50px;
+    &:hover{
+        background-color: var(--btn-hover);
+    }
+}
+
+/* ----------------------------Price List Section CSS END Here------------------------*/
+#price{
+    height: 100vh;
+}
+
 
 /* -----------------------------Responsive CSS Started------------------------------ */
 /* -----------------------Tablet Responsive START(till 991px this CSS rule will followed)-------------------------- */
@@ -425,6 +527,16 @@ main #hero{
     #service .heading{
         font-size: 36px;
         margin-bottom: 12px;
+    }
+    #bookaseat{
+        height: 155vh;
+        margin-top: 60em;
+    }
+    #bookaseat .content{
+        padding: 45px;
+    }
+    .personaldata div{
+        width: 100%;
     }
 }
 /* -----------------------Tablet Responsive END (till 991px this CSS rule will followed)-------------------------- */
@@ -539,6 +651,12 @@ main #hero{
     }
     .service-card .card .content p:nth-child(1){
         font-size: 20px;
+    }
+    #bookaseat{
+        margin-top: 50em;
+    }
+    #bookaseat .content{
+        max-width: 100%;
     }
 }
 /* -----------------------Mobile Responsive END(till 771px this CSS rule will followed)-------------------------- */
