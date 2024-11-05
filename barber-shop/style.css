@@ -370,7 +370,7 @@ main #hero{
 }
 /* ----------------------------Service Section CSS END Here------------------------*/
 
-/* ----------------------------Price List Section CSS Start Here------------------------*/
+/* ----------------------------Book a Seat Section CSS Start Here------------------------*/
 #bookaseat{
     height: 115vh;
     margin-top: 25vh;
@@ -469,16 +469,74 @@ main #hero{
     }
 }
 
-/* ----------------------------Price List Section CSS END Here------------------------*/
+/* ----------------------------Book a Seat Section CSS END Here------------------------*/
+
+/* ----------------------------Price List Section CSS START Here------------------------*/
 #price{
-    height: 100vh;
+    height: 80vh;
+    padding: 100px 50px;
+    display: flex;
+}
+#price .leftcontainer{
+    flex-grow: 1;
+    padding-right: 50px;
+}
+#price .leftcontainer .head .heading{
+    margin-bottom: 8px;
+    font-size: 46px;
+    font-weight: 900;
+}
+#price .leftcontainer .head .desc{
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+#price .leftcontainer .pricelst div{
+    display: flex;
+    margin-bottom: 8px;
+}
+#price .leftcontainer .pricelst div p{
+    font-size: 22px;
+    font-weight: 900;
+}
+#price .leftcontainer .pricelst div span{
+    flex: auto;
+    background-color: var(--gray);
+    height: 2px;
+    margin: auto 15px 0;
+}
+#price .leftcontainer .pricelst div p:nth-child(3){
+    color: var(--primary-color);
+}
+.rightcontainer .card{
+    max-height: 20em;
+    width: 22vw;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+    &:hover{
+        transform: scale(1.04);
+        background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    }
+}
+.rightcontainer .card img{
+    height: 20em;
+    width: 20vw;
+    margin: 0px 10px;
+    object-fit: cover;
+    border-radius: 20px;
+    transform: rotate(8deg);
 }
 
-
+/* ----------------------------Price List Section CSS END Here------------------------*/
 /* -----------------------------Responsive CSS Started------------------------------ */
 /* -----------------------Tablet Responsive START(till 991px this CSS rule will followed)-------------------------- */
 @media (max-width: 991px) {
-    #hero, #story, #discount, #service, #bookaseat{
+    #hero, #story, #discount, #service, #bookaseat, #price{
         max-width: 65vw;
     }
     .content-image{
@@ -538,13 +596,27 @@ main #hero{
     .personaldata div{
         width: 100%;
     }
+    #price{
+        height: 130vh;
+        padding: 50px 25px;
+        flex-direction: column;
+    }
+    .rightcontainer .card{
+        margin: 58px 0;
+        max-height: 25em;
+        width: 100%;
+    }
+    .rightcontainer .card img{
+        height: 25em;
+        width: 100%;
+    }
 }
 /* -----------------------Tablet Responsive END (till 991px this CSS rule will followed)-------------------------- */
 
 
 /* -----------------------Mobile Responsive START(till 771px this CSS rule will followed)-------------------------- */
 @media (max-width: 771px){
-    #hero, #story, #discount, #service, #bookaseat{
+    #hero, #story, #discount, #service, #bookaseat, #price{
         max-width: 100vw;
     }
     header{
